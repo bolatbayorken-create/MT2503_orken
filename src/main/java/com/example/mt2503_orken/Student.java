@@ -4,7 +4,7 @@ public class Student extends Human{
     private String ap;
     private float grade;
 
-    public static int amount = 0;
+    public static int amount = 0; // я честно не понял в чем суть static
 
     public Student(String name, int age, boolean isexist, String ap, float grade){
         super(name, age, isexist);
