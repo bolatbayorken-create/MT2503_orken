@@ -1,14 +1,14 @@
 package com.example.mt2503_orken;
 
-public class Human {
-    private int age;
-    private String name;
-    private boolean isexist;
+public abstract class Human {
+    protected int age;
+    protected String name;
+    protected boolean isExist;
 
-    public Human(String name, int age, boolean isexist){
+    public Human(String name, int age, boolean isExist){
         this.name = name;
         this.age = age;
-        this.isexist = isexist;
+        this.isExist = isExist;
     }
 
     public String getName(){return name;}
@@ -17,10 +17,11 @@ public class Human {
     public int getAge(){return age;}
     public void setAge(int age){this.age = age;}
 
-    public boolean getIsexist(){return isexist;}
-    public void setIsexist(boolean isexist){this.isexist = isexist;}
+    public boolean getIsExist(){return isExist;}
+    public void setIsExist(boolean isExist){this.isExist = isExist;}
 
-
-    public String sayYourPosition(){return "I am a Human";}
     public String sayYourName(){return name;}
+
+    public abstract String sayYourPosition();
+
 }

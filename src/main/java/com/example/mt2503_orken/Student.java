@@ -1,19 +1,21 @@
 package com.example.mt2503_orken;
 
-public class Student extends Human{
-    private String ap;
+public final class Student extends Human implements IStudy{
+    private String academicProgram;
     private float grade;
 
-    public static int amount = 0; // я честно не понял в чем суть static
+    private final String university = "AITU";
 
-    public Student(String name, int age, boolean isexist, String ap, float grade){
-        super(name, age, isexist);
-        this.ap = ap;
+    public static int amount = 0;
+
+    public Student(String name, int age, boolean isExist, String academicProgram, float grade){
+        super(name, age, isExist);
+        this.academicProgram = academicProgram;
         this.grade = grade;
     }
 
-    public String getAp(){return ap;}
-    public void setAp(String ap){this.ap = ap;}
+    public String getAcademicProgram(){return academicProgram;}
+    public void setAcademicProgram(String academicProgram){this.academicProgram = academicProgram;}
 
     public float getGrade(){return grade;}
     public void setGrade(float grade){this.grade = grade;}
@@ -21,4 +23,10 @@ public class Student extends Human{
     @Override
     public String sayYourPosition(){return "I am a Student";}
     public String sayYourName(){return getName();}
+
+    public void study(){System.out.println(getName() + " is studying " + academicProgram);}
+    public String getAcademicInfo(){return academicProgram + " grade: " + grade;}
+
+    public final String getUniversity(){return university;}
+
 }
